@@ -100,15 +100,14 @@ Downloads | {{ config['PUBLIC_CONFIG'].site.title }}
                             <h3>
                                 <img src="{{ url_for('static', filename='images/raspberry_pi.png') }}" alt="" title="">
                                 {{ name }} {{ version }}
-                                <span
-                                        class="down-os">For Raspberry PI 3 B:</span>
+                                <span class="down-os">For Raspberry PI 3 B:</span>
                             </h3>
                         </div>
                     </div>
                     <!-- version -->
                     <p>
                         <a href="{{ url_for('static', filename='downloads/raspberry_pi/{0}-{1}-armhf.deb'.format(name_lowercase, version)) }}">
-                            Debian/Ubuntu {{ version }} Package (.deb)
+                            Raspbian {{ version }} Package (.deb)
                         </a>
                     </p>
                     <p>
@@ -116,6 +115,24 @@ Downloads | {{ config['PUBLIC_CONFIG'].site.title }}
                             Application Archive {{ version }} (.tar.gz)
                         </a>
                     <p>
+                </div>
+
+                <div class="row">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>
+                                <img src="{{ url_for('static', filename='images/android.png') }}" alt="" title="">
+                                {{ name }} {{ version }}
+                                <span class="down-os">Android:</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <!-- version -->
+                    <p>
+                        <a href="{{ url_for('static', filename='downloads/android/{0}-{1}-arm.adb'.format(name_lowercase, version)) }}">
+                            Android {{ version }} Package (.adb)
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
