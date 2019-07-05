@@ -130,6 +130,11 @@ Downloads | {{ config['PUBLIC_CONFIG'].site.title }}
                     <!-- version -->
                     <p>
                         <a href="{{ config['PUBLIC_CONFIG'].player.android_playstore_link }}">
+                            Android {{ version }} Package (Play Store)
+                        </a>
+                    </p>
+                    <p>
+                        <a href="{{ url_for('static', filename='downloads/android/{0}-{1}-arm.apk'.format(name_lowercase, version)) }}">
                             Android {{ version }} Package (.apk)
                         </a>
                     </p>
