@@ -14,7 +14,7 @@ Signup | {{ config['PUBLIC_CONFIG'].site.title }}
             </h1>
         </div>
         <div class="panel-body">
-            <h3>{% trans %}Sign In{% endtrans %}</h3>
+            <h3>{% trans %}Sign Up{% endtrans %}</h3>
             <p>{% trans %}Note: Your data isn't going anywhere.{% endtrans %}</p>
             {{ util.flashed_messages(dismissible=True, container=False) }}
             <form action="" method="post" class="form" role="form">
@@ -41,7 +41,7 @@ Signup | {{ config['PUBLIC_CONFIG'].site.title }}
                 {{ form_field(form.apply, class="btn") }}
             </form>
         </div>
-        <div class="panel-footer text-left">{% trans %}Don`t have an account?{% endtrans %}
+        <div class="panel-footer text-left">{% trans %}Have an account?{% endtrans %}
             <a class="pull-right" href={{ url_for('HomeView:signin') }}><b>{% trans %}Sign in{% endtrans %}</b></a>
         </div>
     </div>
