@@ -109,9 +109,9 @@
                     {{ config['PUBLIC_CONFIG'].company.title }}
                 </a>. All rights reserved.
             </p>
-            <p class="keep-left">Partners:
+            <p class="keep-left">Exclusive partners:
                 {% for partner in config['PUBLIC_CONFIG'].support.partners %}
-                <li><a href="{{ partner.company }}">{{ partner.website }}</a></li>
+                <li><a href="{{ partner.website }}">{{ partner.company }} ({{ partner.country }} region)</a></li>
                 {% endfor %}
             </p>
             <p> Website development -
