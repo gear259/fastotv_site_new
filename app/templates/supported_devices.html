@@ -91,6 +91,15 @@
 <footer>
     <div class="container">
         <div class="jumbotron text-center">
+            <p class="keep-left">Exclusive Partners:
+                {% for partner in config['PUBLIC_CONFIG'].support.partners %}
+            <li><a href="{{ partner.website }}">{{ partner.company }} ({{ partner.country }} region)</a></li>
+            {% endfor %}
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="jumbotron text-center">
             <p class="keep-left">Address: {{config['PUBLIC_CONFIG'].support.contact_address }}</p>
             <p class="keep-left">Copyright © 2014-2019
                 <a href="{{ config['PUBLIC_CONFIG'].company.domain }}">
