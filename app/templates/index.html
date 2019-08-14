@@ -109,6 +109,11 @@
                     {{ config['PUBLIC_CONFIG'].company.title }}
                 </a>. All rights reserved.
             </p>
+            <p class="keep-left">Partners:>
+                {% for partner in config['PUBLIC_CONFIG'].support.partners %}
+                <li><a href="{{ partner.company }}">{{ partner.website }}</a></li>
+                {% endfor %}
+            </p>
             <p> Website development -
                 <a href="/">
                     <img src="{{ url_for('static', filename='assets/images/fastogt.png') }}">
