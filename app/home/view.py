@@ -146,7 +146,7 @@ class HomeView(FlaskView):
                 flash_error(form.errors)
                 return render_template('home/signup.html', form=form)
 
-            email = form.email.data
+            email = form.email.data.lower()
             if not is_valid_email(email, False):
                 flash_error(gettext(u'Invalid email.'))
                 return render_template('home/signup.html', form=form)
