@@ -49,7 +49,7 @@ class SubscriberView(FlaskView):
     @route('/add_device', methods=['POST'])
     @login_required
     def add_device(self):
-        device = Device(name=request.form['name'], connections=request.form['connections'])
+        device = Device(name=request.form['name'])
         current_user.add_device(device)
         return render_template('subscriber/devices.html')
 

@@ -27,7 +27,6 @@ Devices | {{ config['PUBLIC_CONFIG'].site.title }}
                         <tr>
                             <th>#</th>
                             <th>Name</th>
-                            <th>Max connections</th>
                             <th>Created date</th>
                             <th>Actions</th>
                         </tr>
@@ -37,7 +36,6 @@ Devices | {{ config['PUBLIC_CONFIG'].site.title }}
                         <tr id='{{ device.id }}'>
                             <td>{{ loop.index }}</td>
                             <td>{{ device.name }}</td>
-                            <td>{{ device.connections }}</td>
                             <td>{{ device.created_date }}</td>
                             <td>
                                 <form action="{{ url_for('SubscriberView:remove_device', did=device.id) }}"
@@ -53,8 +51,6 @@ Devices | {{ config['PUBLIC_CONFIG'].site.title }}
                 <form class="form-inline" action="{{ url_for('SubscriberView:add_device') }}" method="post">
                     <input class="form-control" name="name" placeholder="Name" pattern=".{3,32}" required
                            title="3 to 32 characters">
-                    <input class="form-control" name="connections" placeholder="Max connections" type="number" value="1"
-                           step="1" min="1" max="100">
                     <button type="submit" class="btn btn-success">Add</button>
                 </form>
             </div>
