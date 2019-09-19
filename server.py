@@ -18,5 +18,5 @@ if __name__ == '__main__':
     parser.add_argument('--host', help='host (default: {0})'.format(HOST), default=HOST)
     argv = parser.parse_args()
 
-    http_server = WSGIServer((argv.host, argv.port), app)
+    http_server = WSGIServer((argv.host, int(argv.port)), app)
     http_server.serve_forever()
